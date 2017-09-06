@@ -4,7 +4,7 @@
 */
     get_header();
 ?>
-    <!-- CORPO  -->
+    <!-- CORPO PORTIFOLIO -->
     <main class="container">
         <?php 
             get_template_part( 'template', 'head-title' );

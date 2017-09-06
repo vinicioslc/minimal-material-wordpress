@@ -5,14 +5,12 @@
 ?>
 <?php get_header (); ?>
 <!-- CORPO  -->
+<!-- TEMPLATE BLOG -->
 <main class="container">
 
 <?php 
     get_template_part( 'template', 'head-title' );
-?>
-
-    
-<!-- END CORPO -->
+?>    
 <article class="container light-blue">
     <!-- CARDS  -->
     <div class="cards-container">
@@ -20,8 +18,8 @@
         $wpquery = new WP_Query('type=post&posts_per_page=100&category__not_in=2');
         if ($wpquery->have_posts()) 
         : while ( $wpquery->have_posts() ) 
-            : $wpquery->the_post();  
-            get_template_part( 'template-post', get_post_type() );     ?>
+        : $wpquery->the_post();  
+        get_template_part( 'template-card', get_post_type() );     ?>
         
         <?php endwhile; else : ?>
         <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
@@ -29,5 +27,6 @@
     </div>
     <!-- END CARDS -->
 </article>
+<!-- END CORPO -->
 
 <?php get_footer(); ?>

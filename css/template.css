@@ -9,7 +9,6 @@
 	padding: 0;
 	margin: 0;
 	background: none;
-	color: #1d2021;
 }
 
 p {
@@ -51,17 +50,22 @@ ul, li {
 .cyan-lighten-3 {
 	background: #80deea;
 }
-
+.linear-gradient {
+	background: linear-gradient(transparent, rgba(0, 0, 0, .6), rgba(0, 0, 0, .8));
+}
+.linear-transparent-mask {
+	-webkit-mask-image: linear-gradient( rgba(0, 0, 0 ,1), rgba(0, 0, 0 ,1), transparent);
+}
 
 /* 
 ******************************************TEXT COLORS */
 
 .text-white {
-	color: white;
+	color: white !important;
 }
 
 .text-black {
-	color: #1d2021;
+	color: #1d2021 !important;
 }
 
 .text-grey {
@@ -70,6 +74,12 @@ ul, li {
 
 .text-grey-lighten-1 {
 	color: #bdbdbd;
+}
+.text-grey-darken-3 {
+	color: #424242 !important;
+}
+.text-grey-darken-4 {
+	color: #212121 !important;
 }
 
 
@@ -264,9 +274,11 @@ ul.menu {
 /*****************************************PORTIFOLIO CARDS*/
 
 .cards-container {
+	max-width: 1100px;
+	margin: auto;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	display: flex;
+	display: flex;	
 	padding: 5% 0 5% 0%;
 	height: fit-content;
 }
@@ -293,14 +305,13 @@ ul.menu {
 	height: 100%;
 	position: relative;
 	overflow: hidden;
-	box-shadow: rgba(0, 0, 0, 1) 0px 0px 20px;
+	box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px;
 	background: #314348;
 }
 
 .card-content:hover {
 	transition-duration: .5s;
 	box-shadow: rgba(0, 0, 0, .8) 0px 5px 30px;
-	transform: scale(1.005);
 }
 
 .card-description {
@@ -308,7 +319,6 @@ ul.menu {
 	position: absolute;
 	height: 50%;
 	width: 100%;
-	background: linear-gradient(transparent, rgba(0, 0, 0, .6), rgba(0, 0, 0, .8));
 	padding: 5% 0% 5% 0%;
 }
 
@@ -327,11 +337,6 @@ ul.menu {
 	opacity: .8;
 	height: 30%;
 }
-
-.card-category > a {
-	color: white;
-}
-
 .card-excerpt {
 	overflow: hidden;
 	opacity: .6;
@@ -340,7 +345,6 @@ ul.menu {
 
 .card-excerpt> p {
 	box-sizing: border-box;
-	color: white;
 	height: 100%;
 }
 
@@ -350,7 +354,23 @@ ul.menu {
 .img-portifolio {
 	height: 100% !important;
 }
+/****************************************BLOG CARDS */
 
+.paper-card-content {
+	cursor: pointer;
+	margin: auto;
+	transition-duration: .5s;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+.paper-card-content:hover {
+	transition-duration: .5s;
+	transform: scale(1.005);
+}
 
 /****************************************FOOTER*/
 

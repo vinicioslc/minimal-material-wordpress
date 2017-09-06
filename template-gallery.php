@@ -1,6 +1,7 @@
+<!-- TEMPLATE GALLERY -->
 <div class="portifolio-card scroll-animation">
     <div onclick="openPage('<?php the_permalink(); ?>');" class="card-content">
-        <div class="card-description">
+        <div class="card-description linear-gradient">
             <h2 class="card-title text-white">
                 <?php
                 the_title();
@@ -21,3 +22,4 @@
         ></div>
     </div>
 </div>
+<!-- TEMPLATE GALLERY -->

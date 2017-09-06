@@ -12,7 +12,7 @@ get_header ();
 
 <div class="paper-header light-blue"></div>
 <article class="paper-container grey-lighten-1 scroll-animation">
-    <!-- CARDS  -->
+    <!-- CARDS PAGE TEXT -->
     <div class="paper white">
             <div class="bread-crumbs text-grey lighten-2">
                     Vinicios Clarindo &gt; <?php     the_title();            ?>

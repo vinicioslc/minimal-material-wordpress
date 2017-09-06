@@ -1,4 +1,4 @@
-
+<!-- TEMPALTE DISQUS -->
 <div id="comments" class="comments-area">
     <div id="disqus_thread">
         <script>
@@ -24,3 +24,4 @@
         <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
     </div>
 <div>
+<!-- TEMPALTE DISQUS -->
