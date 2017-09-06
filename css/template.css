@@ -1,0 +1,544 @@
+/* FONTE ROBOTO*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/*****************************************DEFAULT ELEMENTS*/
+
+* {
+	font-family: 'Roboto', sans-serif;
+	padding: 0;
+	margin: 0;
+	background: none;
+	color: #1d2021;
+}
+
+p {
+	font-weight: lighter;
+}
+
+a:link {
+	text-decoration: unset;
+	transition-duration: .5s;
+}
+
+a:link:hover {
+	text-decoration: unset;
+	color: dodgerblue;
+	transition-duration: .5s;
+}
+
+ul, li {
+	list-style-type: none;
+	color: gray;
+	margin-left: 10px;
+}
+
+
+/*****************************************BACKGROUND COLORS*/
+
+.light-blue {
+	background: lightblue;
+}
+
+.white {
+	background: white;
+}
+
+.grey {
+	background: gray;
+}
+
+.cyan-lighten-3 {
+	background: #80deea;
+}
+
+
+/* 
+******************************************TEXT COLORS */
+
+.text-white {
+	color: white;
+}
+
+.text-black {
+	color: #1d2021;
+}
+
+.text-grey {
+	color: #9e9e9e;
+}
+
+.text-grey-lighten-1 {
+	color: #bdbdbd;
+}
+
+
+/*
+*****************************************TEXT LAYOUT*/
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-center-midle {
+	vertical-align: super;
+}
+
+.text-inline {
+	display: inline;
+}
+
+.text-small {
+	font-size: small;
+}
+
+.text-medium {
+	font-size: medium;
+}
+
+
+/*****************************************LAYOUT*/
+
+.margin-right-3vw {
+	margin-right: 3vw;
+}
+
+.container {
+	margin: 0;
+	width: 100%;
+}
+
+.paper-header {
+	height: 35vh;
+}
+
+#pageButton {
+	cursor: pointer;
+}
+
+.paper {
+	margin: -30vh auto auto auto;
+	box-sizing: border-box;
+	width: 90vw;
+	max-width: 980px;
+	min-height: 250px;
+	height: fit-content;
+	border-radius: 5px;
+	padding: 20px;
+	box-shadow: rgba(0, 0, 0, .4) 0 5px 10px 0px;
+}
+
+.bread-crumbs {
+	margin: 20px 0;
+	text-align: left;
+	font-size: medium;
+	font-weight: 100;
+}
+
+.paper > h2 {
+	font-size: xx-large;
+	margin: 35px 0 25px 0;
+}
+
+.paper > h3 {
+	font-size: x-large;
+	margin: 25px 0 25px 0;
+}
+
+.paper > p {
+	margin: 25px 0 25px 0;
+}
+
+
+/* container of text paper */
+
+.paper-container {
+	padding: 10vh 5vw;
+}
+
+.comments-area{
+	padding-top: 10vh;
+}
+
+
+/*****************************************NAV-BAR*/
+
+
+/* DYNAMIC MENU BUTTON*/
+
+#menuButton {
+	display: none;
+}
+
+#menuButton + label span {
+	width: 9vh;
+	height: 9vh;
+	margin-left: 5vw;
+	z-index: 5;
+	display: block;
+	position: fixed;
+	margin-top: 5vh;
+	background-image: url(../img/perfil.jpg);
+	background-size: cover;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+#menuButton:checked + label span {
+	width: 10vh;
+	height: 10vh;
+	margin-left: 10vw;
+}
+
+#menuButton:checked ~ nav {
+	opacity: 1;
+	display: block;
+	left: 0;
+	transition: all 0.3s cubic-bezier(0.15, 0.24, 0, 1.02);
+}
+
+nav {
+	opacity: 0;
+	z-index: 4;
+	left: calc(-100vw);
+	width: 100vw;
+	height: 100vh;
+	min-width: 200px;
+	position: fixed;
+	background: white;
+	box-shadow: white 10px 0px 50px 25px;
+	transition: all 0.3s cubic-bezier(0.68, 0.01, 0.88, 0.43);
+}
+
+ul.menu {
+	margin-top: 20vh;
+	list-style: none;
+	width: 100%;
+}
+
+.menu > li {
+	margin: 0;
+	display: block;
+	margin-left: 10%;
+	line-height: 10vh;
+	padding: 5vh 0;
+	font-size: xx-large;
+}
+
+.current-menu-item > a {
+	color: #D8D8D8;
+}
+
+
+/*****************************************HEADER*/
+
+.header-container {
+	height: 70vh;
+	min-height: fit-content;
+}
+
+.header {
+	padding: 20% 5% 10% 5%;
+	margin: auto;
+	max-width: 1000px;
+}
+
+.header > .h1 {
+	font-weight: bold;
+	font-size: 40px;
+	word-wrap: normal;
+}
+
+.header > .meta {
+	padding-top: 5vh;
+	font-weight: 100;
+	font-size: 20px;
+}
+
+
+/*****************************************PORTIFOLIO CARDS*/
+
+.cards-container {
+	flex-flow: row wrap;
+	justify-content: space-between;
+	display: flex;
+	padding: 5% 0 5% 0%;
+	height: fit-content;
+}
+
+
+/* apply to empty expansion container and child the card layout */
+
+#empty-container, .portifolio-card {
+	display: block;
+	flex: 25 22 auto;
+	width: 400px;
+	height: 30vh;
+	min-height: 300px;
+	margin: 0 5% 5% 5%;
+	transition: .5s ease-in-out;
+}
+
+.card-content {
+	cursor: pointer;
+	margin: auto;
+	transition-duration: .5s;
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	box-shadow: rgba(0, 0, 0, 1) 0px 0px 20px;
+	background: #314348;
+}
+
+.card-content:hover {
+	transition-duration: .5s;
+	box-shadow: rgba(0, 0, 0, .8) 0px 5px 30px;
+	transform: scale(1.005);
+}
+
+.card-description {
+	bottom: 0;
+	position: absolute;
+	height: 50%;
+	width: 100%;
+	background: linear-gradient(transparent, rgba(0, 0, 0, .6), rgba(0, 0, 0, .8));
+	padding: 5% 0% 5% 0%;
+}
+
+.card-description > * {
+	box-sizing: border-box;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.card-title {
+	text-shadow: rgba(0, 0, 0, .6) 0 0 20px;
+	height: 40%;
+}
+
+.card-category {
+	opacity: .8;
+	height: 30%;
+}
+
+.card-category > a {
+	color: white;
+}
+
+.card-excerpt {
+	overflow: hidden;
+	opacity: .6;
+	height: 35%;
+}
+
+.card-excerpt> p {
+	box-sizing: border-box;
+	color: white;
+	height: 100%;
+}
+
+
+/*!important due necessary*/
+
+.img-portifolio {
+	height: 100% !important;
+}
+
+
+/****************************************FOOTER*/
+
+.footer {
+	padding: 5vh 0;
+	height: 25vh;
+	display: block;
+	position: relative;
+	bottom: 0;
+	line-height: 7vh;
+}
+
+.links {
+	vertical-align: middle;
+	padding-top: 5vh;
+}
+
+
+/*****************************************ICONS*/
+
+.icon {
+	display: inline-flex;
+	width: 32px;
+	height: 32px;
+	margin: auto 0;
+}
+
+.icon > div {
+	width: 90%;
+	height: 90%;
+	margin: 10%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.facebook-icon {
+	background-image: url(../img/icons/facebook.svg);
+}
+
+.linkedin-icon {
+	background-image: url(../img/icons/linkedin.svg);
+}
+
+
+/******************************* ANIMATIONS CLASSES */
+
+
+/* IMAGE PAN ANIMATION */
+
+div > .effect-hover-pan {
+	transition-duration: 30s !important;
+	background-size: cover !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+}
+
+div:hover > .effect-hover-pan {
+	background-position: center right !important;
+	transition-duration: 10s !important;
+}
+
+
+/* OPACITY CHANGE WHEN HOVER */
+
+.animation-hover-fade {
+	opacity: 0.5;
+	transition-duration: .5s;
+}
+
+.animation-hover-fade:hover {
+	opacity: 1;
+	transition-duration: .5s;
+}
+
+
+/* SCROLL FADEIN ANIMATION */
+
+.scroll-animation {
+	opacity: 0;
+}
+
+.fade-in {
+	opacity: 1;
+	animation-name: element-reveal;
+	animation-duration: .7s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: 1;
+}
+
+.out-animation {
+	animation: outlightbox 0.8s forwards;
+}
+
+
+/******************************* ANIMATIONS */
+
+@keyframes element-reveal {
+	0% {
+		transform: translateY(10vh);
+		opacity: 0;
+	}
+	100% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+}
+
+
+/********************************* MEDIA QUERIES */
+
+
+/* Remove content of card on small screens */
+
+@media screen and (max-width: 425px) {
+	.card-description {
+		box-sizing: border-box;
+		height: 100%;
+	}
+	.card-title {
+		height: 30%;
+	}
+	.card-category {
+		opacity: .9;
+		height: 65%;
+	}
+	.card-category {
+		height: 10%;
+		display: block;
+	}
+	.card-excerpt {}
+}
+
+
+/*for resolutions below than tablet*/
+
+@media screen and (max-width: 768px) {
+	.header > .h1 {
+		padding-top: 10vh;
+		font-size: 32px;
+		word-wrap: normal;
+	}
+	.header > .meta {
+		font-weight: 5;
+		font-size: 25px;
+	}
+	.paper-container {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+/*below than Leptop and larger than small phone*/
+
+@media screen and (max-width: 1024px) and (min-width: 426px) {
+	#empty-container, .portifolio-card {
+		height: 500px;
+		min-height: 300px;
+	}
+	.card-description {
+		box-sizing: border-box;
+		height: 70%;
+		padding: 15% 0% 5% 0%;
+	}
+	.card-title {
+		height: 40%;
+	}
+	.card-category {
+		height: 20%;
+	}
+	.card-excerpt {
+		overflow: hidden;
+		opacity: .6;
+		height: 60%;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.header > .h1 {
+		font-size: 3rem;
+	}
+	.header > .meta {
+		font-weight: 100;
+		font-size: 2rem;
+	}
+	.header {
+		max-width: 980px;
+		margin: auto;
+	}
+}
