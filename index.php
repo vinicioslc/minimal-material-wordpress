@@ -9,7 +9,9 @@
             <!-- CARDS  -->
             <div class="cards-container">
                 <?php 
-                $wpquery = new WP_Query('type=post&posts_per_page=100&category__not_in=2');
+                $postsCategory = get_post_custom();
+                $postCatID = $postsCategory['posts_category_id'][0];
+                $wpquery = new WP_Query('type=post&posts_per_page=100&cat='.$postCatID);
                 if ($wpquery->have_posts()) 
                 : while ( $wpquery->have_posts() ) 
                 : $wpquery->the_post();  
