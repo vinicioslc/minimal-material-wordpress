@@ -27,13 +27,12 @@ a:link:hover {
 }
 
 ul, li {
-	list-style-type: none;
 	color: gray;
 	margin-left: 10px;
 }
 
 
-/*****************************************BACKGROUND COLORS*/
+/***************************************** BACKGROUND COLORS */
 
 .light-blue {
 	background: lightblue;
@@ -50,15 +49,16 @@ ul, li {
 .cyan-lighten-3 {
 	background: #80deea;
 }
+
 .linear-gradient {
 	background: linear-gradient(transparent, rgba(0, 0, 0, .6), rgba(0, 0, 0, .8));
 }
+
 .linear-transparent-mask {
 	-webkit-mask-image: linear-gradient( rgba(0, 0, 0 ,1), rgba(0, 0, 0 ,1), transparent);
 }
 
-/* 
-******************************************TEXT COLORS */
+/***************************************** TEXT COLORS */
 
 .text-white {
 	color: white !important;
@@ -84,7 +84,7 @@ ul, li {
 
 
 /*
-*****************************************TEXT LAYOUT*/
+***************************************** TEXT LAYOUT */
 
 .text-center {
 	text-align: center;
@@ -376,6 +376,18 @@ ul.menu {
 .paper-card-content:hover {
 	transition-duration: .5s;
 	transform: scale(1.005);
+}
+/**************************************** BLOG CONTENT */
+
+.content ul li {
+	margin: 2vh 0 2vh 0;
+	list-style-type: none;
+}
+
+.content ul li::before {
+	margin-right: 10px;
+	margin-left: 20px;
+	content:' - ';
 }
 
 /****************************************FOOTER*/
