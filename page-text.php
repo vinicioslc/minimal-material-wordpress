@@ -15,8 +15,10 @@ get_header ();
     <!-- CARDS PAGE TEXT -->
     <div class="paper white">
             <div class="bread-crumbs text-grey lighten-2">
-                    Vinicios Clarindo &gt; <?php     the_title();            ?>
-                    
+                    <a href="<?= index_rel_link() ?>">
+                    Vinicios Clarindo &gt; 
+                    </a>
+                    <?php the_title(); ?>                    
             </div>
             <?php 
             if ( have_posts() ) :

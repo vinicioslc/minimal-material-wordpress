@@ -27,15 +27,15 @@ get_header ();
     <!-- CARDS  -->
     <div class="paper white">
             <div class="bread-crumbs text-grey lighten-2">
+                    <a href="<?= get_site_url( null, 'blog', scheme ) ?>">
                     Vinicios Clarindo &gt; 
-                    <?php 
-                    the_title();
-                    ?>                    
+                    </a>
+                    <?php the_title(); ?>                    
             </div>
                     <?php 
                         if ( have_posts() ) : while ( have_posts() ) : the_post();  
                     ?>
-            <div class="content">
+            <div class="content text-black">
                     <?php 
                         the_content();
                     ?>
