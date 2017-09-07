@@ -3,7 +3,7 @@
         <!-- CORPO  -->
         <main class="container">
         <?php 
-            get_template_part( 'template', 'head-title' );
+            get_template_part( 'template-blog', 'head-title' );
         ?>    
         <article class="container light-blue">
             <!-- CARDS  -->
