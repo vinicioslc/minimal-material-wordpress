@@ -51,7 +51,7 @@ function AddFadeToSidebar() {
     elements.each (function (obj, $val) {
         var link = $($val).attr("href");
         $($val).click(function () { openPage(link); });
-        $($val).removeAttr('href');
+        $($val).removeAttr('href').css('cursor', 'pointer');
     });
 }
 
@@ -65,9 +65,6 @@ document.addEventListener('DOMContentLoaded', function () {
         checkAnimation();
     });
 
-    $(".portifolio-card").click(function () {
-        CardController.BlurCard($(this));
-    });
     $(".card-category > a").removeAttr("href");
 
     AddFadeToSidebar();
