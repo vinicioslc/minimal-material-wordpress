@@ -173,6 +173,12 @@ ul, li {
 .comments-area{
 	padding-top: 10vh;
 }
+img {
+	height: auto;
+    width: 80vw;
+    max-width: 800px;
+    border-radius: 5px;
+}
 
 
 /*****************************************NAV-BAR*/
