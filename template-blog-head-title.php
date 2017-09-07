@@ -3,7 +3,7 @@
     <header class="header fade-in">
         <h2 class="h1">
         <?php 
-        get_template_part( 'header', 'name' );
+        get_template_part( 'header-blog', 'name' );
         ?>       
         </h2>
         <h1 class="meta text-grey">
