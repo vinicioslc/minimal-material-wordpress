@@ -6,7 +6,7 @@ function openPage(value) {
     $('body').prepend('<div id="fademain" style="z-index: 4; opacity : 0; position : fixed; height : 100vh; width:100vw; background:white;"></div>')
     $('body > #fademain').animate(
         {
-            opacity: 1,
+            opacity: 2,
         },
         1000,
         function () {
@@ -66,7 +66,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     $(".card-category > a").removeAttr("href");
-
+    $('body').prepend('<div id="fademain" style="z-index: 4; opacity : 1; position : fixed; height : 100vh; width:100vw; background:white;"></div>')
+    $('body > #fademain').animate(
+        {
+            opacity: -1,
+        },
+        1000,
+        function () {
+            $(this).remove();
+        });
     AddFadeToSidebar();
 }, { passive: true });
 
