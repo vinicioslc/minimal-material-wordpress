@@ -8,7 +8,7 @@
                 ?>
             </h2>
             <h3 class="card-category text-white">                
-                <?php the_tags( 'Habilidades: ', ', ' ,'. '); ?>                
+                <?php the_tags( '', ', ' ,'. '); ?>                
             </h3>
             <div class="card-excerpt text-white">
                 <?php 

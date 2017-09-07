@@ -19,7 +19,7 @@
                 if ($wpquery->have_posts()) 
                 : while ( $wpquery->have_posts() ) 
                 : $wpquery->the_post();                  
-                get_template_part( 'template-card', 'gallery' );
+                get_template_part( 'template-card', 'project' );
             endwhile; else : 
                 ?>
                 <p><?php _e( 'Me desculpe, não pude encontrar nenhum post' ); ?></p>
