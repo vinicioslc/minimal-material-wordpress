@@ -15,36 +15,35 @@ get_header ();
             ?>
             
         </h2>
-        <h1 class="meta text-grey">Por :
-        <?php 
-        echo get_the_modified_author();
-        ?>
-        </h1>
+        <h1 class="meta text-grey"><?= get_the_modified_author()?></h1>
     </header>
 </section>
-<div class="paper-header cyan-lighten-3"></div>
-<article class="paper-container grey-lighten-1 scroll-animation">
+<?php 
+    // This thing get the paper-header color
+    $postsCategory = get_post_custom();
+    $headerColor = $postsCategory['paper-header-color'][0];
+?>
+<article class="paper-container grey-lighten-1 scroll-animation" style="background : <?= $headerColor ?>;">
     <!-- CARDS  -->
-    <div class="paper white">
-            <div class="bread-crumbs text-grey lighten-2">
-                    <a href="<?= get_site_url( null, 'blog', scheme ) ?>">
-                    Vinicios Clarindo &gt; 
-                    </a>
-                    <?php the_title(); ?>                    
-            </div>
+    <div class="text-white">
+            <a href="">
+                <div class="icon">
+                    <div class="back-post-icon"></div>                  
+                </div>
+            </a>
                     <?php 
                         if ( have_posts() ) : while ( have_posts() ) : the_post();  
                     ?>
-            <div class="content text-black">
+            <div class="content text-white">
                     <?php 
                         the_content();
                     ?>
             </div>             
-                    <?php 
-                        if (comments_open()):
-                            get_template_part( 'template','disqus');
-                        endif;    
-                    ?>
+            <?php 
+                if (comments_open()):
+                    get_template_part( 'template','disqus');
+                endif;    
+            ?>
             <?php
                 endwhile; else : ?>
             <p>

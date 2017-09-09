@@ -22,7 +22,7 @@
         </div>
         <div style="background: url('<?php 
         the_post_thumbnail_url(); 
-        ?>');" class="img-portifolio effect-hover-pan">
+        ?>');" class="img-portifolio-card effect-hover-pan">
         </div>
     </div>
 </div>

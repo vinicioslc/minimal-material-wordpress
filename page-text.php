@@ -8,9 +8,9 @@ get_header ();
 
 <?php 
     get_template_part( 'template', 'head-title' );
+    get_template_part( 'template-paper', 'header-color' );
 ?>
 
-<div class="paper-header light-blue"></div>
 <article class="paper-container grey-lighten-1 scroll-animation">
     <!-- CARDS PAGE TEXT -->
     <div class="paper white">
