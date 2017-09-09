@@ -55,6 +55,36 @@ ul, li {
 	background: linear-gradient(transparent, rgba(0, 0, 0, .5), rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
 }
 
+
+/*****************************************ICONS*/
+
+.icon {
+	display: inline-flex;
+	width: 32px;
+	height: 32px;
+	margin: auto 0;
+}
+
+.icon > div {
+	width: 90%;
+	height: 90%;
+	margin: 10%;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.facebook-icon {
+	background-image: url(../img/icons/facebook.svg);
+}
+
+.linkedin-icon {
+	background-image: url(../img/icons/linkedin.svg);
+}
+.back-post-icon{
+	background-image: url(../img/icons/back-post.svg)
+}
+
 .linear-transparent-mask {
 	-webkit-mask-image: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
 }
@@ -213,12 +243,13 @@ ul.menu {
 }
 
 .header {
-	padding: 20% 5% 10% 5%;
+	padding: 20vh 5vw 10vh 5vw;
 	margin: auto;
 	max-width: 1000px;
 }
 
 .header > .h1 {
+	padding-top: 10vh;
 	font-weight: bold;
 	font-size: 40px;
 	word-wrap: normal;
@@ -227,7 +258,7 @@ ul.menu {
 .header > .meta {
 	padding-top: 5vh;
 	font-weight: 100;
-	font-size: 20px;
+	font-size: 1.5rem;
 }
 
 
@@ -266,7 +297,7 @@ ul.menu {
 	position: relative;
 	overflow: hidden;
 	box-shadow: rgba(0, 0, 0, .8) 0px 0px 20px;
-	background: #314348;
+	background: black;
 }
 
 .card-content:hover {
@@ -316,7 +347,7 @@ ul.menu {
 
 /*!important due necessary*/
 
-.img-portifolio {
+.img-portifolio-card {
 	height: 100% !important;
 }
 
@@ -398,10 +429,23 @@ ul.menu {
 }
 
 img {
+	width: 100%;
 	height: auto;
-	width: 80vw;
 	max-width: 800px;
 	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.73) 0 10px 30px -10px;	
+}
+
+.wp-caption{
+	text-align: center !important;
+	width: 100% !important;
+	height: auto !important;
+	margin: 5vh 0 5vh 0;
+}
+.wp-caption-text {	
+	font-size: small;
+	font-style: italic;
+	padding-top: 5vh;
 }
 
 
@@ -422,47 +466,22 @@ img {
 }
 
 
-/*****************************************ICONS*/
-
-.icon {
-	display: inline-flex;
-	width: 32px;
-	height: 32px;
-	margin: auto 0;
-}
-
-.icon > div {
-	width: 90%;
-	height: 90%;
-	margin: 10%;
-	background-repeat: no-repeat;
-	background-size: contain;
-	background-position: center;
-}
-
-.facebook-icon {
-	background-image: url(../img/icons/facebook.svg);
-}
-
-.linkedin-icon {
-	background-image: url(../img/icons/linkedin.svg);
-}
-
-
 /******************************* ANIMATIONS CLASSES */
 
 
 /* IMAGE PAN ANIMATION */
 
 div > .effect-hover-pan {
+	transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 	transition-duration: 30s !important;
 	background-size: cover !important;
-	background-position: center !important;
+	background-position: center left !important;
 	background-repeat: no-repeat !important;
 }
 
 div:hover > .effect-hover-pan {
 	background-position: center right !important;
+	transition: cubic-bezier(0.075, 0.82, 0.165, 1);
 	transition-duration: 10s !important;
 }
 
@@ -514,10 +533,10 @@ div:hover > .effect-hover-pan {
 
 @keyframes left-right-loop {
 	0% {
-		background-position: center left ;
+		background-position: center left;
 	}
-	50%{
-		background-position: center right ;
+	50% {
+		background-position: center right;
 	}
 	100% {
 		background-position: center left;
@@ -563,13 +582,12 @@ div:hover > .effect-hover-pan {
 		animation-play-state: running;
 	}
 	.header > .h1 {
-		padding-top: 10vh;
-		font-size: 32px;
+		font-size: 2rem;
 		word-wrap: normal;
 	}
 	.header > .meta {
-		font-weight: 5;
-		font-size: 25px;
+		font-weight: 100;
+		font-size: 1rem;
 	}
 }
 
