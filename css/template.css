@@ -9,7 +9,7 @@
 	padding: 0;
 	margin: 0;
 	background: none;
-	transition-duration: .5s;
+	transition-duration: .5s;	
 }
 
 p {
@@ -81,10 +81,13 @@ ul, li {
 .linkedin-icon {
 	background-image: url(../img/icons/linkedin.svg);
 }
-.back-post-icon{
+
+.back-post-icon {
 	background-image: url(../img/icons/back-post.svg)
 }
-
+.back-post-icon:hover {
+	transform: translateX(-8px) scaleX(.8);
+}
 .linear-transparent-mask {
 	-webkit-mask-image: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
 }
@@ -383,6 +386,13 @@ ul.menu {
 	box-shadow: rgba(0, 0, 0, .4) 0 5px 10px 0px;
 }
 
+.paper-gallery-bg {
+	height: auto;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
+
 .bread-crumbs {
 	margin: 5vh 0;
 	text-align: left;
@@ -390,17 +400,17 @@ ul.menu {
 	font-weight: 100;
 }
 
-.paper > h2 {
+.content > h2 {
 	font-size: xx-large;
 	margin: 35px 0 25px 0;
 }
 
-.paper > h3 {
+.content > h3 {
 	font-size: x-large;
 	margin: 25px 0 25px 0;
 }
 
-.paper > p {
+.content > p {
 	margin: 25px 0 25px 0;
 }
 
@@ -415,9 +425,6 @@ ul.menu {
 	content: ' - ';
 }
 
-
-/* container of text paper */
-
 .paper-container {
 	padding: 10vh 5vw;
 	max-width: 1000px;
@@ -427,22 +434,26 @@ ul.menu {
 .comments-area {
 	padding: 10vh 0vw 5vh 0vw;
 }
+.comments-area > hr, h2{
+	margin : 4vh 0;
+}
 
 img {
 	width: 100%;
 	height: auto;
 	max-width: 800px;
 	border-radius: 5px;
-	box-shadow: rgba(0, 0, 0, 0.73) 0 10px 30px -10px;	
+	box-shadow: rgba(0, 0, 0, 0.73) 0 5px 50px -10px;
 }
 
-.wp-caption{
+.wp-caption {
 	text-align: center !important;
 	width: 100% !important;
 	height: auto !important;
 	margin: 5vh 0 5vh 0;
 }
-.wp-caption-text {	
+
+.wp-caption-text {
 	font-size: small;
 	font-style: italic;
 	padding-top: 5vh;
