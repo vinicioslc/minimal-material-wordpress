@@ -12,6 +12,7 @@
 </head>
 
 <body>
+<div id="fademain" style="z-index: 4; opacity : 1; position : fixed; height : 100vh; width:100vw; background:white;"></div>
     <!-- MENU TOPO  -->
     <input type="checkbox" id="menuButton">
     <label class="" for="menuButton">
