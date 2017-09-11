@@ -224,13 +224,13 @@ nav {
 ul.menu {
 	margin-top: 20vh;
 	list-style: none;
-	width: 100%;
+	width: 50vw;
 }
 
 .menu > li {
 	margin: 0;
 	display: block;
-	margin-left: 10%;
+	margin-left: 10vw;
 	line-height: 10vh;
 	padding: 5vh 0;
 	font-size: xx-large;
@@ -313,7 +313,7 @@ ul.menu {
 .card-description {
 	bottom: 0;
 	position: absolute;
-	height: 50%;
+	height: 60%;
 	width: 100%;
 	padding: 10vh 0% 5vh 0%;
 }
@@ -340,13 +340,10 @@ ul.menu {
 }
 
 .card-excerpt {
+	padding-top: 2vh;
 	opacity: .6;
 	height: auto;
 	max-height: 35%;
-}
-
-.card-excerpt> p {
-	box-sizing: border-box;
 }
 
 
@@ -607,11 +604,12 @@ div:hover > .effect-hover-pan {
 	}
 	.card-description {
 		box-sizing: border-box;
-		height: 70%;
+		height: 80%;
 	}
 	.card-excerpt {
-		overflow: hidden;
+		padding-top: 5vh;
 		opacity: .6;
+		bottom: 70vh;
 	}
 }
 

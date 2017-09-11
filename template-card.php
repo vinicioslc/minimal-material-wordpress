@@ -7,7 +7,7 @@
                 the_title();
                 ?>
             </h2>
-            <div class="card-excerpt text-black">
+            <div class="card-excerpt linear-transparent-mask text-black">
                 <?php 
                 the_excerpt();
                 ?>
