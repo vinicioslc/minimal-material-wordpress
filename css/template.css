@@ -149,7 +149,11 @@ ul, li {
 .text-medium {
 	font-size: medium;
 }
-
+/****************************************TEXT LINKS*/
+h4 > a {
+    text-decoration: underline;
+    font-variant: all-small-caps;
+}
 
 /*****************************************LAYOUT*/
 
