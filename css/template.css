@@ -17,12 +17,12 @@ p {
 }
 
 a:link {
-	text-decoration: unset;
+	text-decoration: none;
 	transition-duration: .5s;
 }
 
 a:link:hover {
-	text-decoration: unset;
+	text-decoration: none;
 	color: dodgerblue;
 	transition-duration: .5s;
 }
@@ -222,15 +222,14 @@ nav {
 }
 
 ul.menu {
-	margin-top: 20vh;
+	margin: 20vh 5vw 0 10vw;
 	list-style: none;
-	width: 50vw;
+	width: auto;
 }
 
 .menu > li {
 	margin: 0;
 	display: block;
-	margin-left: 10vw;
 	line-height: 10vh;
 	padding: 5vh 0;
 	font-size: xx-large;
@@ -572,10 +571,10 @@ div:hover > .effect-hover-pan {
 		margin-left: 5vw;
 	}
 	.header {
-		max-width: 560;
+		max-width: 560px;
 	}
 	.header > .h1 {
-		font-size: 3.5rem;
+		font-size: 2.5rem;
 	}
 }
 
@@ -585,7 +584,6 @@ div:hover > .effect-hover-pan {
 		word-wrap: normal;
 	}
 	.header > .meta {
-		font-weight: 100;
 		font-size: 1.2rem;
 	}
 	#menuButton:checked + label span {
@@ -599,7 +597,7 @@ div:hover > .effect-hover-pan {
 
 @media screen and (max-width: 1024px) and (min-width: 426px) {
 	#empty-container, .portifolio-card {
-		height: 500px;
+		height: 400px;
 		min-height: 300px;
 	}
 	.card-description {
@@ -615,8 +613,7 @@ div:hover > .effect-hover-pan {
 
 @media screen and (min-width: 1024px) {
 	.header > .meta {
-		font-weight: 100;
-		font-size: 2rem;
+		font-size: 1.5rem;
 	}
 }
 
@@ -627,23 +624,20 @@ div:hover > .effect-hover-pan {
 	}
 }
 
-@media screen and (min-width: 1440px) {
-	.header > .h1 {
-		font-size: 4rem;
-	}
-	.header > .meta {
-		font-weight: 100;
-		font-size: 2.5rem;
-	}
-	.header {
-		max-width: 1200px;
-		margin: auto;
-	}
-}
-
 @media screen and (max-width: 1440px) {
 	.header {
 		max-width: 900px;
-		margin: auto;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.header > .h1 {
+		font-size: 3rem;
+	}
+	.header > .meta {
+		font-size: 2rem;
+	}
+	.header {
+		max-width: 1000px;
 	}
 }
