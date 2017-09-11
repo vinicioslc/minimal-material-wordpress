@@ -9,7 +9,7 @@
 	padding: 0;
 	margin: 0;
 	background: none;
-	transition-duration: .5s;	
+	transition-duration: .5s;
 }
 
 p {
@@ -85,10 +85,13 @@ ul, li {
 .back-post-icon {
 	background-image: url(../img/icons/back-post.svg)
 }
+
 .back-post-icon:hover {
 	transform: translateX(-8px) scaleX(.8);
 }
+
 .linear-transparent-mask {
+	-moz-mask-image: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
 	-webkit-mask-image: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
 }
 
@@ -252,7 +255,6 @@ ul.menu {
 }
 
 .header > .h1 {
-	padding-top: 10vh;
 	font-weight: bold;
 	font-size: 40px;
 	word-wrap: normal;
@@ -434,8 +436,9 @@ ul.menu {
 .comments-area {
 	padding: 10vh 0vw 5vh 0vw;
 }
-.comments-area > hr, h2{
-	margin : 4vh 0;
+
+.comments-area > hr, .comments-area > h2 {
+	margin: 4vh 0;
 }
 
 img {
@@ -542,18 +545,6 @@ div:hover > .effect-hover-pan {
 	}
 }
 
-@keyframes left-right-loop {
-	0% {
-		background-position: center left;
-	}
-	50% {
-		background-position: center right;
-	}
-	100% {
-		background-position: center left;
-	}
-}
-
 
 /********************************* MEDIA QUERIES */
 
@@ -571,34 +562,38 @@ div:hover > .effect-hover-pan {
 	.card-category {
 		opacity: .9;
 	}
-	.card-excerpt {}
 	.paper-container {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-	.paper {
-		box-shadow: rgba(0, 0, 0, .6) 0 0 30px;
+}
+
+@media screen and (min-width: 768px) {
+	#menuButton + label span {
+		width: 7vh;
+		height: 7vh;
+		margin-left: 5vw;
+	}
+	.header {
+		max-width: 560;
+	}
+	.header > .h1 {
+		font-size: 3.5rem;
 	}
 }
 
-
-/*for resolutions below than tablet*/
-
 @media screen and (max-width: 768px) {
-	div > .effect-hover-pan {
-		animation-name: left-right-loop;
-		animation-duration: 20s;
-		animation-direction: alternate;
-		animation-iteration-count: infinite;
-		animation-play-state: running;
-	}
 	.header > .h1 {
 		font-size: 2rem;
 		word-wrap: normal;
 	}
 	.header > .meta {
 		font-weight: 100;
-		font-size: 1rem;
+		font-size: 1.2rem;
+	}
+	#menuButton:checked + label span {
+		width: 10vh;
+		height: 10vh;
 	}
 }
 
@@ -620,16 +615,37 @@ div:hover > .effect-hover-pan {
 	}
 }
 
-@media screen and (min-width: 1440px) {
-	.header > .h1 {
-		font-size: 3rem;
-	}
+@media screen and (min-width: 1024px) {
 	.header > .meta {
 		font-weight: 100;
 		font-size: 2rem;
 	}
+}
+
+@media screen and (max-width: 1024px)  {
 	.header {
-		max-width: 980px;
+		max-width: 1200px;
+		margin: auto;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.header > .h1 {
+		font-size: 4rem;
+	}
+	.header > .meta {
+		font-weight: 100;
+		font-size: 2.5rem;
+	}
+	.header {
+		max-width: 1200px;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.header {
+		max-width: 900px;
 		margin: auto;
 	}
 }
