@@ -5,7 +5,6 @@
 function  CarregarScripts () {
     wp_enqueue_style( 'template', get_template_directory_uri().'/css/template.css',array(),'all');
 	wp_enqueue_script( 'template', get_template_directory_uri().'/js/scripts.js', array(), true);   
-	wp_enqueue_script( 'smoothScroll', get_template_directory_uri().'/js/smoothScroll.js', array(), true);    	
 }
 
 add_action( 'wp_enqueue_scripts', 'CarregarScripts');
