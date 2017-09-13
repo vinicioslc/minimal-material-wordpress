@@ -4,12 +4,12 @@
 *************************************************/
 function  CarregarScripts () {
     wp_enqueue_style( 'template', get_template_directory_uri().'/css/template.css',array(),'all');
-	wp_enqueue_script( 'template', get_template_directory_uri().'/js/scripts.js', array(), true);   
+	wp_enqueue_script( 'scripts', get_template_directory_uri().'/js/scripts.js', array(), true);   	
 }
 
 add_action( 'wp_enqueue_scripts', 'CarregarScripts');
 
-/*Função para registro de nossos menus
+/*Função para registro dos nossos menus
  *************************************************/
 register_nav_menus(
 	array(
@@ -18,7 +18,7 @@ register_nav_menus(
 	)
 );
 
-/* Remove configuração padrão
+/* Remove opções padrão do wp
 **************************************************/
 function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');

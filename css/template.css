@@ -91,7 +91,6 @@ ul, li {
 }
 
 .linear-transparent-mask {
-	-moz-mask-image: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
 	-webkit-mask-image: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
 }
 
@@ -515,12 +514,11 @@ div:hover > .effect-hover-pan {
 
 /* SCROLL FADEIN ANIMATION */
 
-.scroll-animation {
-	opacity: 0;
-}
+/* .scroll-animation {
+	opacity: 1;
+} */
 
 .fade-in {
-	opacity: 1;
 	animation-name: element-reveal;
 	animation-duration: .7s;
 	animation-timing-function: ease-out;
