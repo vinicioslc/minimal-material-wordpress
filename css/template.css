@@ -528,10 +528,49 @@ div:hover > .effect-hover-pan {
 .out-animation {
 	animation: outlightbox 0.8s forwards;
 }
-
+.btn-not-opened > * {
+	animation: alert-vibrate;
+	animation-duration: 3s;
+	animation-timing-function: ease-out;
+	animation-iteration-count: infinite;
+}
 
 /******************************* ANIMATIONS */
-
+@keyframes alert-vibrate {
+	0% {
+		transform: translateX(0);
+	}
+	10%{
+		transform: translateX(1.5vw);
+	}
+	20% {
+		transform: translateX(-1.5vw);
+	}
+	30%{
+		transform: translateX(1vw);
+	}
+	40%{
+		transform: translateX(-1vw);
+	}
+	50%{
+		transform: translateX(.5vw);
+	}
+	60%{
+		transform: translateX(-.5vw);	
+	}
+	70%{
+		transform: translateX(0);		
+	}
+	80%{
+		transform: translateX(0);		
+	}
+	90%{
+		transform: translateX(0);		
+	}
+	100%{
+		transform: translateX(0);		
+	}
+}
 @keyframes element-reveal {
 	0% {
 		transform: translateY(10vh);
