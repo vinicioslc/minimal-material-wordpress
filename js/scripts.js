@@ -34,13 +34,16 @@ function isElementInViewport(elem) {
 
 //Checa se é tempo de iniciar a animação.
 function checkAnimation() {
+    console.log('checking');
     // para cada item com a classe " scroll-animation" faça...
     var $elem = $('.scroll-animation').each(function (element) {
         // ja esta visivel ? faça-o
         if ($(this).hasClass('fade-in')) {
+            console.log('have class');
             return;
         }
         if (isElementInViewport($(this))) {
+            console.log('doesnt hav a class');
             $(this).addClass('fade-in');
         }
     });

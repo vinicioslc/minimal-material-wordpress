@@ -16,8 +16,7 @@
     <!-- MENU TOPO  -->
     <input type="checkbox" id="menuButton">
     <label class="" for="menuButton">
-            <span title="Ir a página inicial" 
-                  alt="Imagem de Perfil com Vinicios Clarindo">
+            <span title="Abrir menu lateral">
             </span>
     </label>
     <nav for="menuButton" >

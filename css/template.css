@@ -17,12 +17,12 @@ p {
 }
 
 a:link {
-	text-decoration: unset;
+	text-decoration: none;
 	transition-duration: .5s;
 }
 
 a:link:hover {
-	text-decoration: unset;
+	text-decoration: none;
 	color: dodgerblue;
 	transition-duration: .5s;
 }
@@ -81,11 +81,17 @@ ul, li {
 .linkedin-icon {
 	background-image: url(../img/icons/linkedin.svg);
 }
-.back-post-icon{
+
+.back-post-icon {
 	background-image: url(../img/icons/back-post.svg)
 }
 
+.back-post-icon:hover {
+	transform: translateX(-8px) scaleX(.8);
+}
+
 .linear-transparent-mask {
+	-moz-mask-image: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
 	-webkit-mask-image: linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), transparent);
 }
 
@@ -143,7 +149,11 @@ ul, li {
 .text-medium {
 	font-size: medium;
 }
-
+/****************************************TEXT LINKS*/
+h4 > a {
+    text-decoration: underline;
+    font-variant: all-small-caps;
+}
 
 /*****************************************LAYOUT*/
 
@@ -216,15 +226,14 @@ nav {
 }
 
 ul.menu {
-	margin-top: 20vh;
+	margin: 20vh 5vw 0 10vw;
 	list-style: none;
-	width: 100%;
+	width: auto;
 }
 
 .menu > li {
 	margin: 0;
 	display: block;
-	margin-left: 10%;
 	line-height: 10vh;
 	padding: 5vh 0;
 	font-size: xx-large;
@@ -249,7 +258,6 @@ ul.menu {
 }
 
 .header > .h1 {
-	padding-top: 10vh;
 	font-weight: bold;
 	font-size: 40px;
 	word-wrap: normal;
@@ -308,7 +316,7 @@ ul.menu {
 .card-description {
 	bottom: 0;
 	position: absolute;
-	height: 50%;
+	height: 60%;
 	width: 100%;
 	padding: 10vh 0% 5vh 0%;
 }
@@ -335,13 +343,10 @@ ul.menu {
 }
 
 .card-excerpt {
+	padding-top: 2vh;
 	opacity: .6;
 	height: auto;
 	max-height: 35%;
-}
-
-.card-excerpt> p {
-	box-sizing: border-box;
 }
 
 
@@ -383,6 +388,13 @@ ul.menu {
 	box-shadow: rgba(0, 0, 0, .4) 0 5px 10px 0px;
 }
 
+.paper-gallery-bg {
+	height: auto;
+	width: 100vw;
+	margin: 0;
+	padding: 0;
+}
+
 .bread-crumbs {
 	margin: 5vh 0;
 	text-align: left;
@@ -390,17 +402,17 @@ ul.menu {
 	font-weight: 100;
 }
 
-.paper > h2 {
+.content > h2 {
 	font-size: xx-large;
 	margin: 35px 0 25px 0;
 }
 
-.paper > h3 {
+.content > h3 {
 	font-size: x-large;
 	margin: 25px 0 25px 0;
 }
 
-.paper > p {
+.content > p {
 	margin: 25px 0 25px 0;
 }
 
@@ -415,9 +427,6 @@ ul.menu {
 	content: ' - ';
 }
 
-
-/* container of text paper */
-
 .paper-container {
 	padding: 10vh 5vw;
 	max-width: 1000px;
@@ -428,21 +437,26 @@ ul.menu {
 	padding: 10vh 0vw 5vh 0vw;
 }
 
+.comments-area > hr, .comments-area > h2 {
+	margin: 4vh 0;
+}
+
 img {
 	width: 100%;
 	height: auto;
 	max-width: 800px;
 	border-radius: 5px;
-	box-shadow: rgba(0, 0, 0, 0.73) 0 10px 30px -10px;	
+	box-shadow: rgba(0, 0, 0, 0.73) 0 5px 50px -10px;
 }
 
-.wp-caption{
+.wp-caption {
 	text-align: center !important;
 	width: 100% !important;
 	height: auto !important;
 	margin: 5vh 0 5vh 0;
 }
-.wp-caption-text {	
+
+.wp-caption-text {
 	font-size: small;
 	font-style: italic;
 	padding-top: 5vh;
@@ -531,18 +545,6 @@ div:hover > .effect-hover-pan {
 	}
 }
 
-@keyframes left-right-loop {
-	0% {
-		background-position: center left;
-	}
-	50% {
-		background-position: center right;
-	}
-	100% {
-		background-position: center left;
-	}
-}
-
 
 /********************************* MEDIA QUERIES */
 
@@ -560,34 +562,37 @@ div:hover > .effect-hover-pan {
 	.card-category {
 		opacity: .9;
 	}
-	.card-excerpt {}
 	.paper-container {
 		padding-left: 10px;
 		padding-right: 10px;
 	}
-	.paper {
-		box-shadow: rgba(0, 0, 0, .6) 0 0 30px;
+}
+
+@media screen and (min-width: 768px) {
+	#menuButton + label span {
+		width: 7vh;
+		height: 7vh;
+		margin-left: 5vw;
+	}
+	.header {
+		max-width: 560px;
+	}
+	.header > .h1 {
+		font-size: 2.5rem;
 	}
 }
 
-
-/*for resolutions below than tablet*/
-
 @media screen and (max-width: 768px) {
-	div > .effect-hover-pan {
-		animation-name: left-right-loop;
-		animation-duration: 20s;
-		animation-direction: alternate;
-		animation-iteration-count: infinite;
-		animation-play-state: running;
-	}
 	.header > .h1 {
 		font-size: 2rem;
 		word-wrap: normal;
 	}
 	.header > .meta {
-		font-weight: 100;
-		font-size: 1rem;
+		font-size: 1.2rem;
+	}
+	#menuButton:checked + label span {
+		width: 10vh;
+		height: 10vh;
 	}
 }
 
@@ -596,16 +601,36 @@ div:hover > .effect-hover-pan {
 
 @media screen and (max-width: 1024px) and (min-width: 426px) {
 	#empty-container, .portifolio-card {
-		height: 500px;
+		height: 400px;
 		min-height: 300px;
 	}
 	.card-description {
 		box-sizing: border-box;
-		height: 70%;
+		height: 80%;
 	}
 	.card-excerpt {
-		overflow: hidden;
+		padding-top: 5vh;
 		opacity: .6;
+		bottom: 70vh;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	.header > .meta {
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (max-width: 1024px)  {
+	.header {
+		max-width: 1200px;
+		margin: auto;
+	}
+}
+
+@media screen and (max-width: 1440px) {
+	.header {
+		max-width: 900px;
 	}
 }
 
@@ -614,11 +639,9 @@ div:hover > .effect-hover-pan {
 		font-size: 3rem;
 	}
 	.header > .meta {
-		font-weight: 100;
 		font-size: 2rem;
 	}
 	.header {
-		max-width: 980px;
-		margin: auto;
+		max-width: 1000px;
 	}
 }

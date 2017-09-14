@@ -10,7 +10,7 @@
             <h3 class="card-category text-white">                
                 <?php the_tags( '', ', ' ,'. '); ?>                
             </h3>
-            <div class="card-excerpt text-white">
+            <div class="card-excerpt text-white linear-transparent-mask">
                 <?php 
                 the_excerpt();
                 ?>
