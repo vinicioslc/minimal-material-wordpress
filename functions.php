@@ -5,9 +5,9 @@
 function  CarregarScripts () {
     wp_enqueue_style( 'template', get_template_directory_uri().'/css/template.css',array(),'all');
 	wp_enqueue_script( 'scripts', get_template_directory_uri().'/js/scripts.js', array(), true);  
-	
+
 	// Libraria para acessar cookies cross browser https://github.com/js-cookie/js-cookie
-	wp_enqueue_script( 'scripts', get_template_directory_uri().'/js/Cookie.js', array(), true);  
+	wp_enqueue_script( 'cookiejs', get_template_directory_uri().'/js/Cookie.js', array(), true);  
 }
 
 add_action( 'wp_enqueue_scripts', 'CarregarScripts');
