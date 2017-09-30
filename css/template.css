@@ -541,22 +541,22 @@ div:hover > .effect-hover-pan {
 		transform: translateX(0);
 	}
 	10%{
-		transform: translateX(1.5vw);
+		transform: translateX(10px);
 	}
 	20% {
-		transform: translateX(-1.5vw);
+		transform: translateX(-10px);
 	}
 	30%{
-		transform: translateX(1vw);
+		transform: translateX(5px);
 	}
 	40%{
-		transform: translateX(-1vw);
+		transform: translateX(-5px);
 	}
 	50%{
-		transform: translateX(.5vw);
+		transform: translateX(2.5px);
 	}
 	60%{
-		transform: translateX(-.5vw);	
+		transform: translateX(-2.5px);	
 	}
 	70%{
 		transform: translateX(0);		
