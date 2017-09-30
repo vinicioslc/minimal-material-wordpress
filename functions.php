@@ -8,6 +8,9 @@ function  CarregarScripts () {
 
 	// Libraria para acessar cookies cross browser https://github.com/js-cookie/js-cookie
 	wp_enqueue_script( 'cookiejs', get_template_directory_uri().'/js/Cookie.js', array(), true);  
+
+	// Script js para carregar iframes referenciados por tags
+	wp_enqueue_script('iframer',get_template_directory_uri().'/js/Iframer.js',array(),false); 
 }
 
 add_action( 'wp_enqueue_scripts', 'CarregarScripts');

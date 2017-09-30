@@ -6,9 +6,7 @@
 ?>
     <!-- CORPO PORTIFOLIO -->
     <main class="container">
-        <?php 
-            get_template_part( 'template', 'head-title' );
-        ?>
+        <?php get_template_part( 'template', 'head-title' );?>
         <!-- CARDS  -->
         <article class="container light-blue">
             <div class="cards-container">
