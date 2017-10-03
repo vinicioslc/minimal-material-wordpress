@@ -81,9 +81,11 @@ ul, li {
 .linkedin-icon {
 	background-image: url(../img/icons/linkedin.svg);
 }
-
+.github-icon{
+	background-image: url(../img/icons/github.svg);
+}
 .back-post-icon {
-	background-image: url(../img/icons/back-post.svg)
+	background-image: url(../img/icons/back-post.svg);
 }
 
 .back-post-icon:hover {

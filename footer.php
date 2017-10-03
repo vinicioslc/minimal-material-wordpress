@@ -13,6 +13,11 @@
                             <div class="linkedin-icon"></div>
                         </div>
                     </a>
+                    <a href="https://github.com/vinicioslc" title="Abrir Github" target="_blank" class="margin-right-3vw">
+                        <div class="icon animation-hover-fade">
+                            <div class="github-icon"></div>
+                        </div>
+                    </a>
                     <a class="text-center text-center-midle animation-hover-fade" title="Enviar e-mail" href="mailto:vinicioslc@outlook.com">vinicioslc@outlook.com</a>
                 </div>
             </div>
