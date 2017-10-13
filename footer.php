@@ -38,7 +38,7 @@
                 }
             });
             </script>
-            <?php wp_get_footer( ); ?>
+            <?php wp_footer( ); ?>
         </footer>
     </main>
 </body>
