@@ -234,10 +234,11 @@ ul.menu {
 
 .menu > li {
 	margin: 0;
+	padding: 0;
 	display: block;
-	line-height: 10vh;
-	padding: 5vh 0;
-	font-size: xx-large;
+	line-height: 5vh;
+	padding-top: 10vh;
+    font-size: 3vh;
 }
 
 .current-menu-item > a {

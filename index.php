@@ -9,25 +9,22 @@
             <!-- CARDS  -->
             <div class="cards-container">
                 <?php 
+                    $postCatID = 2;
                     $postsCategory = get_post_custom();
                     $postCatID = $postsCategory['posts_category_id'][0];
-                    $wpquery = new WP_Query('type=post&posts_per_page=100&cat='.$postCatID);
+                    $wpquery = new WP_Query('type=post&posts_per_page=100&cat='.$postCatID.'');
                     if ($wpquery->have_posts()) 
                     : while ( $wpquery->have_posts() ) 
                     : $wpquery->the_post();  
-                    get_template_part( 'template-card', get_post_type() );     
-                ?>
-                
-                <?php 
+                    get_template_part( 'template-card', get_post_type() );
+                   
                     endwhile; else : 
                 ?>
 
                 <p>
-
                     <?php
                         _e( 'Sorry, no posts matched your criteria.' ); 
-                    ?>
-                    
+                    ?>                    
                 </p>
 
                 <?php 
