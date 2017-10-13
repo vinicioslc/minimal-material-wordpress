@@ -9,7 +9,6 @@
 	padding: 0;
 	margin: 0;
 	background: none;
-	transition-duration: .5s;
 }
 
 p {
@@ -19,12 +18,16 @@ p {
 a:link {
 	text-decoration: none;
 	transition-duration: .5s;
+	color: unset;
 }
 
 a:link:hover {
 	text-decoration: none;
 	color: dodgerblue;
 	transition-duration: .5s;
+}
+a:visited{
+	color: rgb(14, 70, 122);
 }
 
 ul, li {
@@ -81,9 +84,11 @@ ul, li {
 .linkedin-icon {
 	background-image: url(../img/icons/linkedin.svg);
 }
-.github-icon{
+
+.github-icon {
 	background-image: url(../img/icons/github.svg);
 }
+
 .back-post-icon {
 	background-image: url(../img/icons/back-post.svg);
 }
@@ -150,11 +155,15 @@ ul, li {
 .text-medium {
 	font-size: medium;
 }
+
+
 /****************************************TEXT LINKS*/
+
 h4 > a {
-    text-decoration: underline;
-    font-variant: all-small-caps;
+	text-decoration: underline;
+	font-variant: all-small-caps;
 }
+
 
 /*****************************************LAYOUT*/
 
@@ -238,7 +247,7 @@ ul.menu {
 	display: block;
 	line-height: 5vh;
 	padding-top: 10vh;
-    font-size: 3vh;
+	font-size: 3vh;
 }
 
 .current-menu-item > a {
@@ -403,30 +412,32 @@ ul.menu {
 	font-size: medium;
 	font-weight: 100;
 }
-
-.content > h2 {
-	font-size: xx-large;
-	margin: 35px 0 25px 0;
+.content{
+	padding: 25px 0 25px 0;
+}
+.content p {
+	margin : 10px 0 5px 0;
+}
+.content h1 {
+	margin : 10px 0 5px 0 ;
 }
 
-.content > h3 {
-	font-size: x-large;
-	margin: 25px 0 25px 0;
+.content a {
+	text-decoration: underline;
 }
-
-.content > p {
-	margin: 25px 0 25px 0;
+.content a:hover {
+	color: dodgerblue;
+	text-decoration-color: dodgerblue;
+	text-decoration: underline;
 }
-
-.content ul li {
-	margin: 2vh 0 2vh 0;
-	list-style-type: none;
+.content ol *, .content ul *{
+	margin: 10px unset;
 }
-
-.content ul li::before {
-	margin-right: 10px;
-	margin-left: 20px;
-	content: ' - ';
+.content ul,.content li,.content ol {
+	margin-left: 15px;	
+}
+.content ul {
+	list-style-type: disc;
 }
 
 .paper-container {
@@ -441,14 +452,6 @@ ul.menu {
 
 .comments-area > hr, .comments-area > h2 {
 	margin: 4vh 0;
-}
-
-img {
-	width: 100%;
-	height: auto;
-	max-width: 800px;
-	border-radius: 5px;
-	box-shadow: rgba(0, 0, 0, 0.73) 0 5px 50px -10px;
 }
 
 .wp-caption {
@@ -479,6 +482,33 @@ img {
 .links {
 	vertical-align: middle;
 	padding-top: 5vh;
+}
+
+
+/******************************* POST IMAGES */
+p{
+	width: auto;
+}
+
+img {
+	border-radius: 5px;
+}
+
+.paper-container img {
+	max-width: 100%;
+	box-shadow: unset;
+}
+
+.paper-gallery-bg img {
+	max-width: 100%;
+	border-radius: 5px;
+	box-shadow: hsla(0, 0%, 0%, 0.7) 0 5px 50px -10px;
+}
+.aligncenter {
+	display: block;
+	margin : auto;
+	position: relative;
+	text-align: center;
 }
 
 
@@ -517,6 +547,7 @@ div:hover > .effect-hover-pan {
 
 /* SCROLL FADEIN ANIMATION */
 
+
 /* .scroll-animation {
 	opacity: 1;
 } */
@@ -531,6 +562,7 @@ div:hover > .effect-hover-pan {
 .out-animation {
 	animation: outlightbox 0.8s forwards;
 }
+
 .btn-not-opened > * {
 	animation: alert-vibrate;
 	animation-duration: 3s;
@@ -538,42 +570,45 @@ div:hover > .effect-hover-pan {
 	animation-iteration-count: infinite;
 }
 
+
 /******************************* ANIMATIONS */
+
 @keyframes alert-vibrate {
 	0% {
 		transform: translateX(0);
 	}
-	10%{
+	10% {
 		transform: translateX(10px);
 	}
 	20% {
 		transform: translateX(-10px);
 	}
-	30%{
+	30% {
 		transform: translateX(5px);
 	}
-	40%{
+	40% {
 		transform: translateX(-5px);
 	}
-	50%{
+	50% {
 		transform: translateX(2.5px);
 	}
-	60%{
-		transform: translateX(-2.5px);	
+	60% {
+		transform: translateX(-2.5px);
 	}
-	70%{
-		transform: translateX(0);		
+	70% {
+		transform: translateX(0);
 	}
-	80%{
-		transform: translateX(0);		
+	80% {
+		transform: translateX(0);
 	}
-	90%{
-		transform: translateX(0);		
+	90% {
+		transform: translateX(0);
 	}
-	100%{
-		transform: translateX(0);		
+	100% {
+		transform: translateX(0);
 	}
 }
+
 @keyframes element-reveal {
 	0% {
 		transform: translateY(10vh);
@@ -661,7 +696,7 @@ div:hover > .effect-hover-pan {
 	}
 }
 
-@media screen and (max-width: 1024px)  {
+@media screen and (max-width: 1024px) {
 	.header {
 		max-width: 1200px;
 		margin: auto;
