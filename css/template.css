@@ -2,7 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-/*****************************************DEFAULT ELEMENTS*/
+/*****************************************RESET ELEMENTS*/
 
 * {
 	font-family: 'Roboto', sans-serif;
@@ -31,7 +31,6 @@ a:visited{
 }
 
 ul, li {
-	color: gray;
 	margin-left: 10px;
 }
 
@@ -240,10 +239,10 @@ ul.menu {
 	list-style: none;
 	width: auto;
 }
-
 .menu > li {
 	margin: 0;
 	padding: 0;
+    color: lightslategray;
 	display: block;
 	line-height: 5vh;
 	padding-top: 10vh;
@@ -416,7 +415,7 @@ ul.menu {
 	padding: 25px 0 25px 0;
 }
 .content p {
-	margin : 10px 0 5px 0;
+	margin : 10px 0 20px 0;
 }
 .content h1 {
 	margin : 10px 0 5px 0 ;
@@ -435,6 +434,7 @@ ul.menu {
 }
 .content ul,.content li,.content ol {
 	margin-left: 15px;	
+	opacity: .8
 }
 .content ul {
 	list-style-type: disc;
