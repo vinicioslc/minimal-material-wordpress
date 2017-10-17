@@ -21,7 +21,7 @@
                     <a class="text-center text-center-midle animation-hover-fade" title="Enviar e-mail" href="mailto:vinicioslc@outlook.com">vinicioslc@outlook.com</a>
                 </div>
             </div>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
             <script>
             $(document).ready(function () {
                 // anima botão de menu se é a primeira vez no site              
