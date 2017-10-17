@@ -1,0 +1,24 @@
+/*for resolutions below than tablet*/
+@media print {
+    .paper-header,
+    footer,
+    #comments,
+    #sidemenu-btn,
+    .bread-crumbs{
+        display: none;
+    }
+    .paper{
+        box-shadow: none;
+        margin: auto;
+    }
+    .header-container{
+        height: inherit;
+        height: auto;
+    }
+    .header {
+        padding: 5vh 4vw;
+    }
+    .paper-container{
+        padding: unset;
+    }
+}

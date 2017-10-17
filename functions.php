@@ -3,11 +3,16 @@
 /* Carrega scripts
 *************************************************/
 function  CarregarScripts () {
-    wp_enqueue_style( 'template', get_template_directory_uri().'/css/template.css',array(),'all');
-	wp_enqueue_script( 'scripts', get_template_directory_uri().'/js/scripts.js',  array('jquery'), true);  
-
+	wp_enqueue_style( 'template', get_template_directory_uri().'/css/template.css', null,'all');
+	
+	wp_enqueue_style( 'template-print', get_template_directory_uri().'/css/template-print.css', null,'print');
+	
+	wp_enqueue_script('jQuery', get_template_directory_uri().'/js/jquery.min.js', null, false);
+	
+	wp_enqueue_script( 'scripts', get_template_directory_uri().'/js/scripts.js',  null, true);  
+	
 	// Libraria para acessar cookies cross browser https://github.com/js-cookie/js-cookie
-	wp_enqueue_script( 'cookiejs', get_template_directory_uri().'/js/Cookie.js',  array('jquery'), true); 
+	wp_enqueue_script( 'cookiejs', get_template_directory_uri().'/js/Cookie.js',  null, true); 
 }
 
 add_action( 'wp_enqueue_scripts', 'CarregarScripts');
