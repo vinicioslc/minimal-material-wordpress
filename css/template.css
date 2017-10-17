@@ -242,7 +242,7 @@ ul.menu {
 .menu > li {
 	margin: 0;
 	padding: 0;
-    color: lightslategray;
+    color: lightgray;
 	display: block;
 	line-height: 5vh;
 	padding-top: 10vh;
