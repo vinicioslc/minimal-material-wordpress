@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html <?php language_attributes(); ?>>
 <head>
     <title><?php the_title('Vinicios Clarindo - '); ?></title>
     <meta name="author" content="Vinicios de Lima Clarindo">

@@ -90,6 +90,7 @@ ul, li {
 
 .back-post-icon {
 	background-image: url(../img/icons/back-post.svg);
+	transition: all .5s;
 }
 
 .back-post-icon:hover {

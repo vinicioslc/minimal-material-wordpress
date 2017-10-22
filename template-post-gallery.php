@@ -7,7 +7,7 @@
 <div class="paper-gallery-bg" style="background : <?= $headerColor ?>;">
     <article class="paper-container grey-lighten-1 scroll-animation text-white">
     <!-- CARDS  -->
-            <a href="javascript:history.back()">
+            <a href="<?= get_home_url(); ?>">
                 <div class="icon">
                     <div class="back-post-icon"></div>                  
                 </div>
