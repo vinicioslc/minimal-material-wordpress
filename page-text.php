@@ -16,7 +16,9 @@ get_header ();
     <div class="paper white">
             <div class="bread-crumbs text-grey lighten-2">
                     <a href="<?= index_rel_link() ?>">
-                    Vinicios Clarindo &gt; 
+                    <?php 
+                       echo bloginfo('name');
+                    ?> &gt; 
                     </a>
                     <?php the_title(); ?>                    
             </div>
