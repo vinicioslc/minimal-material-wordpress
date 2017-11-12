@@ -135,7 +135,9 @@ ul, li {
 .text-center {
 	text-align: center;
 }
-
+.text-right{
+	text-align: right;
+}
 .text-left {
 	text-align: left;
 }
@@ -407,12 +409,24 @@ ul.menu , .menu>ul {
 	margin: 0;
 	padding: 0;
 }
-
-.bread-crumbs {
+.crumbs-container{
+	min-height: 50px;
+	height: auto;
+	margin-bottom: 5vh;
+}
+.date-crumbs, .bread-crumbs{
 	margin: 5vh 0 1vh 0;
-	text-align: left;
+	box-sizing: border-box;
 	font-size: medium;
 	font-weight: 100;
+	width: 50%;
+}
+.bread-crumbs {
+	float: left;
+}
+.date-crumbs{
+	font-size: smaller;
+	float: right;
 }
 .content{
 	padding: 10px 0 25px 0;
@@ -588,7 +602,7 @@ div:hover > .effect-hover-pan {
 
 .btn-not-opened > * {
 	animation: alert-vibrate;
-	animation-duration: 3s;
+	animation-duration: 4s;
 	animation-timing-function: ease-out;
 	animation-iteration-count: infinite;
 }
@@ -601,28 +615,28 @@ div:hover > .effect-hover-pan {
 		transform: translateX(0);
 	}
 	10% {
-		transform: translateX(10px);
+		transform: translateX(0);
 	}
 	20% {
-		transform: translateX(-10px);
+		transform: translateX(-2.5px);
 	}
 	30% {
 		transform: translateX(5px);
 	}
 	40% {
-		transform: translateX(-5px);
+		transform: translateX(-5px);		
 	}
 	50% {
-		transform: translateX(2.5px);
+		transform: translateX(5px);
 	}
 	60% {
 		transform: translateX(-2.5px);
 	}
 	70% {
-		transform: translateX(0);
+		transform: translateX(2.5px);
 	}
 	80% {
-		transform: translateX(0);
+		transform: translateX(-2.5px);		
 	}
 	90% {
 		transform: translateX(0);
