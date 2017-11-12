@@ -408,19 +408,19 @@ ul.menu , .menu>ul {
 }
 
 .bread-crumbs {
-	margin: 5vh 0;
+	margin: 5vh 0 1vh 0;
 	text-align: left;
 	font-size: medium;
 	font-weight: 100;
 }
 .content{
-	padding: 25px 0 25px 0;
+	padding: 10px 0 25px 0;
 }
 .content p {
 	margin : 10px 0 20px 0;
 }
-.content h1 {
-	margin : 10px 0 5px 0 ;
+.content h1,.content h2,.content h3,.content h4,.content h5,.content h6 {
+	margin : 20px 0 15px 0 ;
 }
 
 .content a {
@@ -439,6 +439,29 @@ ul.menu , .menu>ul {
 }
 .content ul {
 	list-style-type: disc;
+}
+.content > blockquote {
+	padding : 10px 25px 10px 25px;
+	color: gray;
+}
+.content > blockquote::before , .content > blockquote::after {
+	font-family: serif;
+	position: relative;
+    display: block;
+	font-size: 3rem;
+}
+.content > blockquote::before {
+	left: -2.5%;
+	top : 20px;
+	content: '\201D';
+	color: gray;
+}
+
+.content > blockquote::after {
+	right: -100%;
+	top: -20px;
+	content :'\201C';
+	color: gray;
 }
 
 .paper-container {
