@@ -1,8 +1,11 @@
 <!-- START template-paper-header-color -->
 <?php 
-    // This thing get the paper-header color
-    $postCustom = get_post_custom();
-    $paperHeaderColor = $postCustom['paper-header-color'][0];
+// This thing get the paper-header color
+$customPostField = get_post_custom();
+$headerColor = $customPostField['paper-header-color'][0];
+if (strpos($headerColor, "#") == false) {
+    $headerColor = "#ff8888";
+}
 ?>
 
 <div class="paper-header light-blue" 
