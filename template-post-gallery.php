@@ -9,8 +9,8 @@ if (strpos($headerColor, "#") == false){
 
 <div class="paper-gallery-bg" style="background : <?= $headerColor ?>;">
     <article class="paper-container grey-lighten-1 scroll-animation text-white">
-    <!-- CARDS  -->
-            <a href="<?php echo (get_home_url() . '/' . the_category()); ?>">
+            <!-- CARDS  -->
+            <a href="<?= get_home_url() ?>">
                 <div class="icon">
                     <div class="back-post-icon"></div>                  
                 </div>
