@@ -235,22 +235,22 @@ nav {
 	transition: all 0.3s cubic-bezier(0.68, 0.01, 0.88, 0.43);
 }
 
-ul.menu {
+ul.menu , .menu>ul {
 	margin: 20vh 5vw 0 10vw;
 	list-style: none;
 	width: auto;
 }
-.menu > li {
+.menu-item , .page_item{
 	margin: 0;
 	padding: 0;
-    color: lightgray;
+    color: darkgray;
 	display: block;
 	line-height: 5vh;
 	padding-top: 10vh;
 	font-size: 3vh;
 }
 
-.current-menu-item > a {
+.current-menu-item > a ,.page_item.current_page_item {
 	color: #D8D8D8;
 }
 
@@ -269,6 +269,7 @@ ul.menu {
 }
 
 .header > .h1 {
+	color: #333;
 	font-weight: bold;
 	font-size: 40px;
 	word-wrap: normal;
