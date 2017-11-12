@@ -449,20 +449,23 @@ ul.menu , .menu>ul {
 	position: relative;
     display: block;
 	font-size: 3rem;
+	color: gray;
 }
 .content > blockquote::before {
 	left: -2.5%;
 	top : 20px;
 	content: '\201D';
-	color: gray;
 }
 
 .content > blockquote::after {
 	right: -100%;
 	top: -20px;
 	content :'\201C';
-	color: gray;
 }
+.content > p > img , .content img{
+box-shadow: rgba(0,0,0,.5) 0px 3px 30px -5px;
+}
+
 
 .paper-container {
 	padding: 10vh 5vw;
